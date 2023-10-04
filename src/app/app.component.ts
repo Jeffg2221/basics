@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics';
+  name = 'Jeff'
+  imgURL = 'https://picsum.photos/id/237/500/500'
+
+  getName(){
+    return this.name;
+  }
+
+  changeImage(e : KeyboardEvent){
+    this.imgURL = (e.target as HTMLInputElement).value;
+  }
+
+  logImg(event : string){
+    console.log(event)
+  }
 }
